@@ -43,6 +43,8 @@ Aplikacija će biti dostupna na http://localhost:5173/.
 
 📌 Napomena
 
+Link do wireframe-a u Figmi: https://www.figma.com/design/ruonnVtiH6x3RkCACGamxc/Sajtoqvad?node-id=0-1&t=8JhxynkojboTDgY6-1
+
 Neophodno je podesiti backend server i bazu podataka.
 
 IP adresa backend servera je definisana u main.js fajlu.
