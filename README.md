@@ -1,6 +1,6 @@
 # NajamQvadova - Web Aplikacija za Iznajmljivanje Kvadova
 
-ATV Rental je moderna web aplikacija razvijena u Vue.js, koja omogućava korisnicima da jednostavno iznajmljuju kvadove na određeni vremenski period. Aplikacija omogućava pregled dostupnih kvadova, prikaz njihovih specifikacija i statusa, kao i proces rezervacije.
+NajamQvadova je moderna web aplikacija razvijena u Vue.js i flask tehnologijama, koja omogućava korisnicima da jednostavno iznajmljuju kvadove na određeni vremenski period. Aplikacija omogućava pregled dostupnih kvadova, prikaz njihovih specifikacija i statusa, kao i proces rezervacije.
 
 ## 🔥 Ključne funkcionalnosti
 
