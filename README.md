@@ -2,7 +2,7 @@
 
 ATV Rental je moderna web aplikacija razvijena u Vue.js, koja omogućava korisnicima da jednostavno iznajmljuju kvadove na određeni vremenski period. Aplikacija omogućava pregled dostupnih kvadova, prikaz njihovih specifikacija i statusa, kao i proces rezervacije.
 
-🔥 Ključne funkcionalnosti
+#🔥 Ključne funkcionalnosti
 
 Prikaz svih kvadova sa osnovnim informacijama (snaga, kubikaža, vrsta goriva, cena).
 
@@ -14,7 +14,7 @@ Interaktivni modal za rezervaciju kvada.
 
 Automatska provera dostupnosti kvada i kredita korisnika.
 
-🛠 Tehnologije
+#🛠 Tehnologije
 
 Frontend: Vue.js + Vite
 
