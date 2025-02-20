@@ -41,7 +41,7 @@ Pokrenite aplikaciju:
 
 Aplikacija će biti dostupna na http://localhost:5173/.
 
-📌 Napomena
+## 📌 Napomena
 
 Link do wireframe-a u Figmi: https://www.figma.com/design/ruonnVtiH6x3RkCACGamxc/Sajtoqvad?node-id=0-1&t=8JhxynkojboTDgY6-1
 
