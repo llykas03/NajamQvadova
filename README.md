@@ -16,13 +16,13 @@ Automatska provera dostupnosti kvada i kredita korisnika.
 
 ## 🛠 Tehnologije
 
-Frontend: _Vue.js + Vite_
+- Frontend: _Vue.js + Vite_
 
-Backend: _Python + Flask_
+- Backend: _Python + Flask_
 
-Baza podataka: MySQL
+- Baza podataka: MySQL
 
-Stilovi: CSS
+- Stilovi: CSS
 
 ## 🚀 Pokretanje projekta
 
@@ -32,12 +32,12 @@ git clone https://github.com/korisnicko-ime/ime-repozitorijuma.git
 
 Instalirajte zavisnosti:
 
-cd ime-repozitorijuma
-npm install
+`cd ime-repozitorijuma`
+`npm install`
 
 Pokrenite aplikaciju:
 
-npm run dev
+`npm run dev`
 
 Aplikacija će biti dostupna na http://localhost:5173/.
 
