@@ -16,11 +16,11 @@ Automatska provera dostupnosti kvada i kredita korisnika.
 
 ## 🛠 Tehnologije
 
-Frontend: Vue.js + Vite
+Frontend: _Vue.js + Vite_
 
-Backend: Node.js / Express (API)
+Backend: _Python + Flask_
 
-Baza podataka: MySQL (ili neka druga relaciona baza)
+Baza podataka: MySQL
 
 Stilovi: CSS
 
