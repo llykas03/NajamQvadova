@@ -111,7 +111,7 @@ def getvozilo(id) :
 #get vozila klijent
 @app.route('/vozilaa', methods=['GET'])
 @jwt_required()
-@role_required(["administrator","user"])
+@role_required(["administrator","user"]) 
 def render_vozilaa():
     upit = '''select * from vozila'''
     cursor.execute(upit)
@@ -777,4 +777,4 @@ def receive_message():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)  # Pokretanje Flask aplikacije
+    app.run(host='0.0.0.0', port=3000)  # Pokretanje Flask aplikacije

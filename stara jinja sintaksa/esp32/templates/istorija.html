@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Kvadovi d.o.o.</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href={{url_for('render_korisnici')}}>Korisnici <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href={{url_for('render_vozila')}}>Vozila</a>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a href={{url_for('loginForma')}} class="btn btn-primary">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row justify-content-center my-5">
+        <h4>Istorija Iznajmljivanja korisnika:</h4>
+        <h5>Ime:{{Korisnik[0].ime}}</h5>
+        <h5>Prezime:{{Korisnik[0].prezime}}</h5>
+        <h5>JMBG:{{Korisnik[0].jmbg}}</h5>
+        
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Ime</th>
+                <th scope="col">Boja</th>
+                <th scope="col">Registracija</th>
+                <th scope="col">Gorivo</th>
+                <th scope="col">Motor</th>
+                <th scope="col">Kubikaza</th>
+                <th scope="col">Konjske Snage</th>
+                <th scope="col">Status Vozila</th>
+                <th scope="col">Godina Proizvodnje</th>
+                <th scope="col">Cena Radnog Sata</th>
+                <th scope="col">Broj iznajmljivanja</th>
+                <th scope="col"> Radni sati</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for vozilo in vozila %}
+              <tr>
+                <td>{{vozilo.ime}}</td>
+                <td>{{vozilo.boja}}</td>
+                <td>{{vozilo.registracija}}</td>
+                <td>{{vozilo.gorivo}}</td>
+                <td>{{vozilo.motor}}</td>
+                <td>{{vozilo.kubikaza}}</td>
+                <td>{{vozilo.konjskeSnage}}</td>
+                <td>{{vozilo.statusVozila}}</td>
+                <td>{{vozilo.godinaProizvodnje}}</td>
+                <td>{{vozilo.cenaRadnogSata}}</td>
+                <td>{{vozilo.brojIznajmljivanja}}</td>
+                <td>{{vozilo.satnicaUkupna}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+  </div>
+{% endblock %}

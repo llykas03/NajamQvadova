@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Kvadovi d.o.o.</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href={{url_for('render_korisnici')}}>Korisnici <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href={{url_for('render_vozila')}}>Vozila</a>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a href={{url_for('loginForma')}} class="btn btn-primary">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="col my-5 justify-content-end">
+        <a href={{ url_for('vozilo_novi') }} role="button" class="btn btn-primary">
+            Dodaj Vozilo
+        </a>
+      </div>
+      <div class="col my-5 justify-content-end">
+        <form action={{ url_for('vozilo_pretraga') }} method="POST">
+          <div class="form-group">
+              <label for="ime">Ime</label>
+              <input type="text" class="form-control" name="ime"  >
+          </div>
+          <div class="form-group">
+            <label for="registracija">Registracija</label>
+            <input type="text" class="form-control" name="registracija"  >
+        </div>
+        <div class="form-group">
+          <label for="gorivo">Gorivo</label>
+          <input type="text" class="form-control" name="gorivo"  >
+      </div>
+      <div class="form-group">
+        <label for="rola">Status</label>
+        <select name="statusVozila" class="form-control">
+            <option selected value=" ">Izaberite status</option>
+            <option value="slobodno">Slobodno</option>
+            <option value="zauzeto">Zauzeto</option>
+        </select>
+    </div>
+          <input type="submit" value="Pretrazi Korisnika" class="btn btn-primary">
+          </form>
+      </div>
+      
+    
+    
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Ime</th>
+                <th scope="col">Boja</th>
+                <th scope="col">Registracija</th>
+                <th scope="col">Gorivo</th>
+                <th scope="col">Motor</th>
+                <th scope="col">Kubikaza</th>
+                <th scope="col">Konjske Snage</th>
+                <th scope="col">Status Vozila</th>
+                <th scope="col">Godina Proizvodnje</th>
+                <th scope="col">Cena Radnog Sata</th>
+                <th scope="col">Broj iznajmljivanja</th>
+                <th scope="col"> Radni sati</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for vozilo in vozila %}
+              <tr>
+                <td>{{vozilo.ime}}</td>
+                <td>{{vozilo.boja}}</td>
+                <td>{{vozilo.registracija}}</td>
+                <td>{{vozilo.gorivo}}</td>
+                <td>{{vozilo.motor}}</td>
+                <td>{{vozilo.kubikaza}}</td>
+                <td>{{vozilo.konjskeSnage}}</td>
+                <td>{{vozilo.statusVozila}}</td>
+                <td>{{vozilo.godinaProizvodnje}}</td>
+                <td>{{vozilo.cenaRadnogSata}}</td>
+                <td>{{vozilo.brojIznajmljivanja}}</td>
+                <td>{{vozilo.satnicaUkupna}}</td>
+                <td class="row">
+                    <a href={{ url_for('vozilo_izmena', id=vozilo.id) }} role="button" class="text-warning mx-3">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                    <form action={{ url_for("vozilo_brisanje", id=vozilo.id) }} method="POST" class="text-danger mx-1">
+                      <button class="text-danger mx-1">
+                        <i class="fas fa-trash"></i>
+                      </button>
+                      </form>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+    
+  </div>
+{% endblock %}

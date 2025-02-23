@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "*.htm": "html"
+    },
+    "html.suggest.enabled": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "emmet.includeLanguages": {
+        "html": "html",
+        "javascript": "javascriptreact"
+    }
+}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container col-lg-2 col-lg-12">
+    <div class="my-5"><h3>Izmena vozila </h3>
+    </div>
+
+    <form action={{ url_for('vozilo_izmena', id=vozilo.id) }} method="POST">
+        <div class="form-group">
+            <label for="ime">Ime</label>
+            <input type="text" class="form-control" name="ime" value={{ vozilo.ime }} required>
+        </div>
+        <div class="form-group">
+            <label for="boja">boja</label>
+            <input type="text" class="form-control" name="boja" value={{ vozilo.boja }} required>
+        </div>
+        <div class="form-group">
+            <label for="registracija">Registracija</label>
+            <input type="text" class="form-control" name="registracija" value={{ vozilo.registracija }} required>
+        </div>
+        <div class="form-group">
+            <label for="gorivo">Gorivo</label>
+            <input type="text" class="form-control" name="gorivo" value={{ vozilo.gorivo }} required>
+        </div>
+        <div class="form-group">
+            <label for="motor">Motor</label>
+            <input type="text" class="form-control" name="motor" value={{ vozilo.motor }} required>
+        </div>
+        <div class="form-group">
+            <label for="kubikaza">Kubikaza</label>
+            <input type="text" class="form-control" name="kubikaza" value={{ vozilo.kubikaza }} required>
+        </div>
+        <div class="form-group">
+            <label for="konjskeSnage">Konjske Snage</label>
+            <input type="text" class="form-control" name="konjskeSnage" value={{ vozilo.konjskeSnage }} required>
+        </div>
+        <div class="form-group">
+            <label for="godinaProizvodnje">Godina Proizvodnje</label>
+            <input type="text" class="form-control" name="godinaProizvodnje" value={{ vozilo.godinaProizvodnje }} required>
+        </div>
+        <div class="form-group">
+            <label for="cenaRadnogSata">Cena Radnog Sata</label>
+            <input type="text" class="form-control" name="cenaRadnogSata" value={{ vozilo.cenaRadnogSata }} required>
+        </div>
+        
+        <div class="form-group">
+            <label for="statusVozila">Status Vozila</label>
+            <select name="statusVozila" class="form-control">
+                <option {% if vozilo.statusVozila == "" %} selected {% endif %} value = " ">Izaberite Status</option>
+                <option {% if vozilo.statusVozila == "slobodno" %} selected {% endif %} value="slobodno">Slobodno</option>
+                <option {% if vozilo.statusVozila == "zauzeto" %} selected {% endif %} value="zauzeto">Zauzeto</option>
+            </select>
+        </div>
+        
+        <input type="submit" value="Sacuvaj" class="btn btn-primary">
+    </form>
+</div>
+
+{% endblock %}

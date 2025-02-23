@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Unesi Poruku</h2>
+    <form action="{{ url_for('postaviPorukuSaKlijenta') }}" method="POST">
+        <label for="message">Poruka:</label>
+        <input type="text" id="message" name="message" required>
+        <button type="submit">Pošaljite</button>
+    </form>
+
+    <h3>Trenutna poruka:</h3>
+    <p>
+        {% if global_message %}
+            {{ global_message }}
+        {% else %}
+            Nema poruke
+        {% endif %}
+    </p>
+{% endblock %}

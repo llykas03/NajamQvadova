@@ -5,7 +5,7 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 
-export const ipAdress = 'http://160.99.40.134:5000';
+export const ipAdress = 'http://192.168.1.60:5000';
 
 axios.interceptors.request.use(
   (config) => {
